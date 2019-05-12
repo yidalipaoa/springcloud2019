@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud_api/microservicecloud_api.iml" filepath="$PROJECT_DIR$/microservicecloud_api/microservicecloud_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud_consumer_dept_80/microservicecloud_consumer_dept_80.iml" filepath="$PROJECT_DIR$/microservicecloud_consumer_dept_80/microservicecloud_consumer_dept_80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud_eureka_7001/microservicecloud_eureka_7001.iml" filepath="$PROJECT_DIR$/microservicecloud_eureka_7001/microservicecloud_eureka_7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud_eureka_7002/microservicecloud_eureka_7002.iml" filepath="$PROJECT_DIR$/microservicecloud_eureka_7002/microservicecloud_eureka_7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud_eureka_7003/microservicecloud_eureka_7003.iml" filepath="$PROJECT_DIR$/microservicecloud_eureka_7003/microservicecloud_eureka_7003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud_provider_dept_8001/microservicecloud_provider_dept_8001.iml" filepath="$PROJECT_DIR$/microservicecloud_provider_dept_8001/microservicecloud_provider_dept_8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myparent/myparent.iml" filepath="$PROJECT_DIR$/myparent/myparent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud2019.iml" filepath="$PROJECT_DIR$/springcloud2019.iml" />
+    </modules>
+  </component>
+</project>

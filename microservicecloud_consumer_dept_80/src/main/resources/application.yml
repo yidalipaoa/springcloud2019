@@ -1,0 +1,29 @@
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+  application:
+    name: microservicecloud-consumerdept  #这是对外服务暴露的名称
+
+server:
+  port: 80
+  tomcat:
+    uri-encoding: UTF-8
+  #servlet:
+    #context-path: /consumerdept
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+    register-with-eureka: false #自己不能注册
+#  instance:
+#    instance-id: ${spring.application.name}  #更改注册的实例名称
+#    prefer-ip-address: true     #访问路径可以显示ip
+
+info:
+  app.name: 哈哈哈
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+

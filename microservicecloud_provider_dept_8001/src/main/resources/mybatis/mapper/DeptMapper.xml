@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hansai.springcloud.mapper.DeptMapper">
+    <select id="findById" parameterType="java.lang.Long" resultType="com.hansai.springcloud.entity.Department">
+        select dept_id,deptname,dept_code,datasource from department where dept_id=#{id}
+    </select>
+    <select id="findAll" resultType="com.hansai.springcloud.entity.Department">
+        select dept_id,deptname,dept_code,datasource from department
+    </select>
+    <insert id="addDept" parameterType="com.hansai.springcloud.entity.Department"
+            useGeneratedKeys="true" keyProperty="deptId">
+        insert into department(deptname,dept_code,datasource) values (#{deptname},#{deptCode},DATASOURCE())
+    </insert>
+</mapper>

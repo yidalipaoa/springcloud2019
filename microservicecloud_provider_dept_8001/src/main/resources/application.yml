@@ -1,0 +1,47 @@
+
+spring:
+  datasource:
+    #url: jdbc:mysql://192.168.220.128:3306/clouddb01?characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/clouddb01?characterEncoding=utf8
+    username: root
+    password: 123456
+    druid:
+      stat-view-servlet:
+        url-pattern: /druid/*
+        login-username: druid
+        login-password: 123456
+        enabled: true
+      web-stat-filter:
+        enabled: true
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+  http:
+    encoding:
+      charset: UTF-8
+  application:
+    name: microservicecloud-providerdept  #这是对外服务暴露的名称
+
+server:
+  port: 8001
+  tomcat:
+    uri-encoding: UTF-8
+  #servlet:
+    #context-path: /providerdept
+mybatis:
+  config-location: classpath:mybatis/config/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: ${spring.application.name}  #更改注册的实例名称
+    prefer-ip-address: true     #访问路径可以显示ip
+
+
+
+info:
+  app.name: 哈哈哈
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+

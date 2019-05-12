@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: cluster
+---
+spring:
+  profiles: single  #单机
+server:
+  port: 7003
+eureka:
+  instance:
+    hostname: localhost #eureka服务端的实例名称
+  client:
+    registerWithEureka: false   #是否将自己注册
+    fetchRegistry: false        #false 表示自己就是注册中心，职责为维护服务实例，并不需要去检索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+--- #多环境配置分隔符
+spring:
+  profiles: cluster   #集群
+server:
+  port: 7003
+eureka:
+  instance:
+    hostname: eureka7003.com #eureka服务端的实例名称
+  client:
+    registerWithEureka: false   #是否将自己注册
+    fetchRegistry: false        #false 表示自己就是注册中心，职责为维护服务实例，并不需要去检索服务
+    serviceUrl:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
